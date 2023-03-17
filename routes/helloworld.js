@@ -1,7 +1,7 @@
 const list = [
     {
         func: (req, res) => {
-            res.send("Olá mundo!")
+            res.render("index.ejs", { mensagem: "Olá mundo!"})
         },
         route: "/",
         method: "GET"
