@@ -1,8 +1,8 @@
+const controller = require("../controllers/helloworld")
+
 const list = [
     {
-        func: (req, res) => {
-            res.render("index.ejs", { mensagem: "Olá mundo!"})
-        },
+        func: controller.helloWorldRoute,
         route: "/",
         method: "GET"
     }
