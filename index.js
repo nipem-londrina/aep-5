@@ -5,4 +5,4 @@ const PORT = process.env.PORT
 
 app.use("/", require("./routes/helloworld").router)
 
-app.listen(PORT, () => console.log(`Funcionando na porta ${PORT}`))
+app.listen(PORT, () => console.log(`Listening to http://localhost:${PORT}`))
