@@ -1,6 +1,6 @@
 const { Emoji } = require("../models/emoji")
 
-function helloWorldRoute(req, res) {
+function renderHelloWorld(req, res) {
     const emoji = new Emoji()
     emoji.now(datetime => {
         res.render("index.ejs", {
@@ -10,4 +10,4 @@ function helloWorldRoute(req, res) {
     })
 }
 
-module.exports = { helloWorldRoute }
+module.exports = { renderHelloWorld }
