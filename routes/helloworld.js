@@ -1,11 +1,6 @@
 const controller = require("../controllers/helloworld")
+const router = require("express").Router()
 
-const list = [
-    {
-        func: controller.helloWorldRoute,
-        route: "/",
-        method: "GET"
-    }
-]
+router.get("/", controller.helloWorldRoute)
 
-module.exports = { list }
+module.exports = { router }
