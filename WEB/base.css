@@ -1,0 +1,342 @@
+body {
+    background: #D9D9D9;
+}
+
+.content-box {
+    margin-top: 20px;
+}
+
+.gaadiexp,
+.gaadiexp:after,
+.gaadiexp *,
+.gaadiexp *:before,
+.gaadiexp *:after,
+.header-nav *,
+.header-nav *:before,
+.header-nav *:after {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.gaadiexp {
+    cursor: pointer;
+    height: 60px;
+    margin-bottom: 0;
+    width: 60px;
+    z-index: 9001;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    background: #00043B;
+}
+
+.gaadiexp:after {
+    bottom: 7px;
+    color: #ffffff;
+    content: 'Menu';
+    font-size: 13px;
+    font-weight: 300;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+
+/*--------------------------------------
+ Creates the look of the gaadiexp icon
+ using the inner span and pseudo-elements
+--------------------------------------*/
+
+.gaadiexp span,
+.gaadiexp span:before,
+.gaadiexp span:after {
+    background: #ffffff;
+    border-radius: 0.2em;
+    height: 4px;
+    left: 10px;
+    position: absolute;
+    top: 22px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 40px;
+}
+
+
+/* Reset the left and create the pseudo-element */
+
+.gaadiexp span:before,
+.gaadiexp span:after {
+    content: '';
+    left: 0;
+}
+
+
+/* Top bar position */
+
+.gaadiexp span:before {
+    top: -8px;
+}
+
+
+/* Bottom bar position */
+
+.gaadiexp span:after {
+    top: 8px;
+}
+
+
+/* Get rid of more on action (IE9 or higher) */
+
+.gaadiexp-check:checked+.gaadiexp:after {
+    content: '';
+}
+
+
+/* Get rid of the middle bar on action (IE9 or higher) */
+
+.gaadiexp-check:checked+.gaadiexp span {
+    height: 0;
+    width: 0;
+}
+
+
+/* Moves the top and bottom bars to the middle on action (IE9 or higher) */
+
+.gaadiexp-check:checked+.gaadiexp span:before,
+.gaadiexp-check:checked+.gaadiexp span:after {
+    top: 6px;
+}
+
+
+/* Rotates the top bar on action with full browser support (IE9 or higher) */
+
+.gaadiexp-check:checked+.gaadiexp span:before {
+    -webkit-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    transform: rotate(225deg);
+}
+
+
+/* Rotates the bottom bar on action with full browser support (IE9 or higher) */
+
+.gaadiexp-check:checked+.gaadiexp span:after {
+    -webkit-transform: rotate(-225deg);
+    -ms-transform: rotate(225deg);
+    transform: rotate(-225deg);
+}
+
+#mobile-nav:focus+.gaadiexp,
+.gaadiexp:focus,
+.gaadiexp:hover {
+    background: #00043B;
+}
+
+.gaadiexp-check:checked+.gaadiexp {
+    width: 200px;
+}
+
+.gaadiexp-check:checked+.gaadiexp:after {
+    bottom: 18px;
+    content: 'Close Menu';
+    font-size: 20px;
+    padding-left: 30px;
+}
+
+#mobile-nav {
+    left: -9999px;
+    position: fixed;
+    top: 0;
+}
+
+.header-nav ul li a:active,
+.header-nav ul li a:focus,
+.header-nav ul li a:hover,
+#mobile-nav:focus+.gaadiexp,
+.gaadiexp:focus,
+.gaadiexp:hover {
+    background: rgba(0, 0, 0, 0.1);
+    outline: none;
+    border-bottom: 1px solid #fff;
+}
+
+.fixed-nav {
+    background: #00043B;
+    height: 70px;
+    position: fixed;
+    width: 100%;
+    z-index: 9000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin-top: -10px;
+}
+
+.header-nav {
+    float: left;
+    height: 60px;
+    position: relative;
+    width: 100%;
+
+}
+
+.header-nav ul {
+    background: #00043B;
+
+    height: calc(100vh - 60px);
+    list-style: none;
+    margin: 0;
+    overflow-y: auto;
+    padding: 10px 0 0 0;
+    position: absolute;
+    -webkit-transform: translateX(-110%);
+    transform: translateX(-110%);
+    -webkit-transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    -moz-transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    -o-transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    width: 200px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.075);
+    top: 100%;
+    z-index: 1;
+}
+
+.gaadiexp-check:checked~.header-nav ul {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.header-nav ul li {
+    float: left;
+    position: relative;
+    width: 100%;
+}
+
+.header-nav ul li a {
+    color: rgba(0, 0, 0, 0.79);
+    display: block;
+    float: left;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.75px;
+    line-height: 24px;
+    margin-left: 0;
+    overflow: hidden;
+    padding: 12px 60px 12px 12px;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.list-group-item:last-child {
+    margin-bottom: 0;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #00043B;
+    border: 0px solid #ffffff;
+}
+
+.header-nav ul li a {
+    color: rgba(255, 255, 255, 0.79);
+    display: block;
+    float: left;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.75px;
+    line-height: 24px;
+    margin-left: 0;
+    overflow: hidden;
+    padding: 12px 60px 12px 12px;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+}
+
+.gaadiexp-check:checked+.gaadiexp:after {
+    content: 'Nipem';
+}
+
+.gaadiexp:after {
+    content: '';
+}
+
+/*------------------------------------*/
+/*------------------------------------*/
+/*------------------------------------*/
+/*------------------------------------*/
+/*------PRA CIMA É TUDO CSS DO MENU---*/
+/*------------------------------------*/
+/*------------------------------------*/
+/*------------------------------------*/
+section {
+    padding-top: 7%;
+    padding-bottom: 7%;
+}
+
+h3 {
+    padding-top: 2%;
+    padding-bottom: 4%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #00043B;
+}
+
+form {
+    position: relative;
+    align-items: center;
+    padding: 2% 6%;
+
+}
+
+#btn-form {
+    width: 94%;
+    background-color: #00043B;
+    border-color: #00043B;
+    margin-top: 3%;
+}
+
+#div-color {
+    font-weight: 400;
+    background-color: rgb(247, 247, 247);
+    border-radius: 10px;
+    border-style: outset;
+    width: auto;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 0%;
+}
+
+#btn-atualizar:hover {
+    background-color: rgb(0, 4, 59);
+    border-color: rgba(231, 231, 231, 0.836);
+    color: rgba(255, 255, 255, 0.938);
+
+}
+
+#btn-atualizar {
+    color: rgb(77, 77, 77);
+    background-color: #e9e9e9;
+    border-color: #bbbbbb;
+    box-shadow: 2px 1px 3px 0px rgba(0, 0, 0, 0.226);
+
+}
+
+
+@media (max-width:991px) {
+
+    section {
+        padding-top: 17%;
+    }
+
+}
