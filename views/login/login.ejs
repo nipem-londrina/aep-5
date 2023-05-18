@@ -2,9 +2,10 @@
 <html lang="pt-BR">
 
 <head>
-    <%- include("/partials/head.ejs") %>
-    <link rel="stylesheet" href="./login.css">
+    <%- include('../partials/head.ejs') %>
+        <link rel="stylesheet" href="./login.css">
 </head>
+
 <body>
     <section>
         <div id="div-cor">
@@ -15,8 +16,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-12">
                         <label for=""> </label>
-                        <select type="text" class="form-select form-control" id="type"
-                            name="type">
+                        <select type="text" class="form-select form-control" id="type" name="type">
                             <option selected>Usuario</option>
                             <option value="autarquia">Autarquia</option>
                             <option value="campoEstagio">Campo de Estagio</option>
@@ -42,4 +42,5 @@
         </div>
     </section>
 </body>
+
 </html>
