@@ -5,6 +5,8 @@ const PORT = process.env.PORT
 
 app.set("view engine", "ejs")
 
+app.use(express.static("public"))
+
 app.use("/", require("./routes/helloworld").router)
 app.use("/", require("./routes/autarquia-routes").router)
 
