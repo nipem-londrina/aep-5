@@ -8,8 +8,7 @@ module.exports = {
         "eslint:recommended",
         "plugin:import/recommended"
     ],
-    "overrides": [
-    ],
+    "overrides": [],
     "parserOptions": {
         "ecmaVersion": "latest"
     },
@@ -17,27 +16,12 @@ module.exports = {
         "import"
     ],
     "rules": {
-        "indent": [
-            "warn",
-            4,
-            {
-                "SwitchCase": 1 
-            }
-        ],
-        "linebreak-style": [
-            "warn",
-            "windows"
-        ],
-        "quotes": [
-            "error",
-            "double"
-        ],
-        "semi": [
-            "error",
-            "never"
-        ],
+        "indent": ["warn", 4, { "SwitchCase": 1 }],
+        "linebreak-style": ["warn", "windows"],
+        "quotes": ["error", "double"],
+        "semi": ["error", "never"],
         "no-undef": "error",
         "no-unused-vars": "warn",
-        "import/no-unresolved": [2, {"commonjs": true, "amd": true}]
+        "import/no-unresolved": ["error", { "commonjs": true, "amd": true }]
     }
 }
