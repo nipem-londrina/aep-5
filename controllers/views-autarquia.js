@@ -1,5 +1,3 @@
-//const { Autarquia } = require("../models/autarquia")
-
 function renderCadastroCampo(req, res) {
     res.render("autarquia/cadastrar-campo_estagio")
 }
