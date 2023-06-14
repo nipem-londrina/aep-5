@@ -1,0 +1,40 @@
+#btn-entrar {
+    width: 93%;
+    background-color: #00043B;
+    border-color: #00043B;
+    margin-top: 18%;
+}
+
+
+#div-cor {
+    font-weight: 400;
+    background-color: rgb(247, 247, 247);
+    border-radius: 8px;
+    border-style:outset;
+    width: auto;
+    max-width: 380px;
+    margin: auto;
+    margin-top: 0%;
+    opacity : 0.9;
+    
+
+}
+
+form {
+    display:contents;
+    
+}
+
+.form-group {
+    margin-bottom: 0px;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+section {
+    background: url(/WEB/assets/fundo-site.png) no-repeat;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+
+}
