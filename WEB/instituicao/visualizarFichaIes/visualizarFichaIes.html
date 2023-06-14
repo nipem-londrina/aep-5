@@ -2,7 +2,15 @@
 <html lang="pt-BR">
 
 <head>
-    <%- include(process.cwd() + '/views/_partials/head.ejs') %>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../base.css">
+    <title>Nipem</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
 </head>
 
 <body>
@@ -46,17 +54,17 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label for="curso">Curso</label>
-                        <input type="text" class="form-control" id="curso" name="curso" placeholder="Ex: Enfermagem">
+                        <input type="text" class="form-control" id="curso" name="curso" placeholder="Ex: Enfermagem" aria-label="Disabled input example" disabled readonly>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="periodoSerie">Período/Série do Curso </label>
                         <input type="text" class="form-control" id="periodoSerie"
-                            placeholder="Período/Semestre ou 2º ano." name="periodoSerie">
+                            placeholder="Período/Semestre ou 2º ano." name="periodoSerie" aria-label="Disabled input example" disabled readonly>
                     </div>
                     <div class="form-group col-md-12">
                         <label for="especialidade">Especialidade</label>
                         <input type="text" class="form-control" id="especialidade"
-                            placeholder="Ex: Enfermagem obstétrica" name="especialidade">
+                            placeholder="Ex: Enfermagem obstétrica" name="especialidade" aria-label="Disabled input example" disabled readonly>
                     </div>
                 </div>
                 <div class="form-group col-md-12">
@@ -67,35 +75,36 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="dataInicial">Inicio do Estágio</label>
-                        <input type="date" class="form-control" id="dataInicial" name="dataInicial">
+                        <input type="date" class="form-control" id="dataInicial" name="dataInicial" aria-label="Disabled input example" disabled readonly>
                     </div>
 
                     <div class="form-group col-md-6">
                         <label for="dataFinal">Termino</label>
-                        <input type="date" class="form-control" id="dataFinal" name="dataFinal">
+                        <input type="date" class="form-control" id="dataFinal" name="dataFinal" aria-label="Disabled input example" disabled readonly>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="horaInicial">Horário Inicio</label>
-                        <input type="time" class="form-control" id="horaInicial" name="horaInicial">
+                        <input type="time" class="form-control" id="horaInicial" name="horaInicial" aria-label="Disabled input example" disabled readonly>
                     </div>
 
                     <div class="form-group col-md-6">
                         <label for="horaFinal">Horário Termino</label>
-                        <input type="time" class="form-control" id="horaFinal" name="horaFinal">
+                        <input type="time" class="form-control" id="horaFinal" name="horaFinal" aria-label="Disabled input example" disabled readonly>
                     </div>
                     <div class="form-group col-md-12">
                         <label for="vagasSolicitadas">Quantidade de Vagas</label>
                         <input type="number" class="form-control" id="vagasSolicitadas" placeholder="Ex: 20"
-                            name="vagasSolicitadas">
+                            name="vagasSolicitadas" aria-label="Disabled input example" disabled readonly>
                     </div>
                 </div>
-                <div class="form-group">
-                </div>
+                
                 <div class="text-center">
-                    <button id="btn-form" type="submit" class="col-sm-18 w-100 btn btn btn-success">Enviar</button>
+                    <button id="btn-form" type="submit" class="col-sm-18 w-100 btn btn btn-success">Voltar</button>
                 </div><br>
             </form>
         </div>
     </section>
 
 </body>
+
+</html>
