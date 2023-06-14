@@ -2,9 +2,17 @@
 <html lang="pt-BR">
 
 <head>
-    <%- include(process.cwd() + '/views/_partials/head.ejs') %>
-</head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./../base.css">
+    <link rel="stylesheet" href="./login.css">
+    <title>Nipem</title>
 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
+</head>
 <body>
     <section>
         <div id="div-cor">
@@ -15,7 +23,8 @@
                 <div class="form-row">
                     <div class="form-group col-md-12">
                         <label for=""> </label>
-                        <select type="text" class="form-select form-control" id="type" name="type">
+                        <select type="text" class="form-select form-control" id="type"
+                            name="type">
                             <option selected>Usuario</option>
                             <option value="autarquia">Autarquia</option>
                             <option value="campoEstagio">Campo de Estagio</option>
@@ -41,5 +50,4 @@
         </div>
     </section>
 </body>
-
 </html>

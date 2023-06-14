@@ -1,4 +1,4 @@
-const { CampoDeEstagio } = require("../models/campodeestagio")
+const { CampoDeEstagio } = require("../models/campo_estagio")
 
 function cadastrar(req, res) {
     const model = new CampoDeEstagio()

@@ -4,22 +4,28 @@ module.exports = {
         "commonjs": true,
         "es2021": true
     },
-    "extends": "eslint:recommended",
+    "extends": [
+        "eslint:recommended",
+        "plugin:import/recommended"
+    ],
     "overrides": [
     ],
     "parserOptions": {
         "ecmaVersion": "latest"
     },
+    "plugins": [
+        "import"
+    ],
     "rules": {
         "indent": [
-            "error",
+            "warn",
             4,
             {
                 "SwitchCase": 1 
             }
         ],
         "linebreak-style": [
-            "error",
+            "warn",
             "windows"
         ],
         "quotes": [
@@ -29,6 +35,9 @@ module.exports = {
         "semi": [
             "error",
             "never"
-        ]
+        ],
+        "no-undef": "error",
+        "no-unused-vars": "warn",
+        "import/no-unresolved": [2, {"commonjs": true, "amd": true}]
     }
 }
