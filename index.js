@@ -16,6 +16,7 @@ app.use("/i", require("./routes/views-instituicao_ensino").router)
 app.use("/a", require("./routes/views-autarquia").router)
 
 app.use("/api/v1/campodeestagio", require("./routes/campo_estagio").router)
+app.use("/api/v1/instituicaodeensino", require("./routes/instituicaodeensino").router)
 
 
 app.listen(PORT, () => console.log(`Listening to http://localhost:${PORT}`))
