@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <%- include(process.cwd() + '/views/_partials/head.ejs') %>
+</head>
+
+<body>
+    <section>
+        <div id="div-cor">
+            <form class="login" method="" action="">
+                <div>
+                    <h3><strong>LOGIN</strong></h3>
+                </div><br>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for=""> </label>
+                        <select type="text" class="form-select form-control" id="type" name="type">
+                            <option selected>Usuario</option>
+                            <option value="autarquia">Autarquia</option>
+                            <option value="campoEstagio">Campo de Estagio</option>
+                            <option value="instituicaoDeEnsino">Instituição de Ensino</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="email"> </label>
+                        <input type="email" class="form-control" id="email" placeholder=" E-mail" name="email">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="senha"> </label>
+                        <input type="password" class="form-control" id="senha" placeholder=" Senha" name="senha"><br>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="" class="esqueci-senha">Esqueceu a Senha?</a>
+                </div>
+                <div class="text-center">
+                    <button id="btn-entrar" type="submit" class="col-sm-18 btn btn-success">Entrar</button>
+                </div><br><br>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
