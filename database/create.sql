@@ -20,7 +20,6 @@ CREATE TABLE `insituicaoDeEnsino` (
 	`tipoDeInstituicao` varchar(255) NOT NULL,
 	`nomeContato` varchar(255) NOT NULL,
 	`telefone` varchar(255) NOT NULL,
-	`email` varchar(255) NOT NULL,
 	`endereco` varchar(255) NOT NULL,
 	PRIMARY KEY (`id`)
 );
