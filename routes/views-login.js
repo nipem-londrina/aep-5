@@ -1,6 +1,5 @@
-const controller = require("../controllers/views-login")
 const router = require("express").Router()
 
-router.get("/", controller.renderLogin)
+router.get("/", (req, res) => res.render("login/login"))
 
 module.exports = { router }

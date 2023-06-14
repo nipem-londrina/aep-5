@@ -1,7 +1,6 @@
-const controller = require("../controllers/views-autarquia")
 const router = require("express").Router()
 
-router.get("/cadastrar/campo_estagio", controller.renderCadastroCampo)
-router.get("/cadastrar/instituicao_ensino", controller.renderCadastroInstituicao)
+router.get("/cadastrar/campo_estagio", (req, res) => res.render("autarquia/cadastrar-campo_estagio"))
+router.get("/cadastrar/instituicao_ensino", (req, res) => res.render("autarquia/cadastrar-instituicao_ensino"))
 
 module.exports = { router }

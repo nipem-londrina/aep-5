@@ -1,6 +1,5 @@
-const controller = require("../controllers/views-instituicao_ensino")
 const router = require("express").Router()
 
-router.get("/solicitar", controller.renderSolicitar)
+router.get("/solicitar", (req, res) => res.render("instituicao_ensino/solicitar"))
 
 module.exports = { router }
