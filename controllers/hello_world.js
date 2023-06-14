@@ -5,7 +5,7 @@ function renderHelloWorld(req, res) {
     emoji.now(datetime => {
         res.render("placeholder/hello_world.ejs", {
             mensagem: `Olá mundo! ${emoji.char}`,
-            outramensagem: `${datetime}`
+            outramensagem: datetime
         })
     })
 }

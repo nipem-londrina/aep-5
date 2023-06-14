@@ -12,5 +12,6 @@ app.use(express.static("public"))
 app.use("/", require("./routes/hello_world").router)
 app.use("/autarquia", require("./routes/autarquia").router)
 app.use("/api/v1/campodeestagio", require("./routes/campo_estagio").router)
+app.use("/api/v1/instituicaodeensino", require("./routes/instituicaodeensino").router)
 
 app.listen(PORT, () => console.log(`Listening to http://localhost:${PORT}`))
