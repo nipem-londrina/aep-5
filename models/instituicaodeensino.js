@@ -1,28 +1,16 @@
 const { connection } = require("../database/connection")
 
 class InstituicaoDeEnsino {
-    cadastrar(razaoSocial, cnpj, tipoDeInstituicao, nomeContato, telefone, email, endereco, senha) {
-        connection.execute(
+    async cadastrar(razaoSocial, cnpj, tipoDeInstituicao, nomeContato, telefone, email, endereco, senha) {
+        const [result] = connection.execute(
             "INSERT INTO insituicaoDeEnsino (razaoSocial, cnpj, tipoDeInstituicao, nomeContato, telefone, endereco) VALUES (?,?,?,?,?,?)",
-            [razaoSocial,cnpj,tipoDeInstituicao,nomeContato,telefone,endereco],
-            function (err) {
-                if (err) throw err
-            }
+            [razaoSocial, cnpj, tipoDeInstituicao, nomeContato, telefone, endereco]
         )
-        connection.query(
-            "SELECT last_insert_id() as id",
-            (err, rows) => {
-                if (err) throw err
-                let lastInsertId = rows[0].id
 
-                connection.execute(
-                    "INSERT INTO usuario (login, senha, tipoUsuario, idInstituicaoDeEnsino) VALUES (?,?,?,?)",
-                    [email, senha, 2, lastInsertId],
-                    function (err) {
-                        if (err) throw err
-                    }
-                )
-            }
+        const userId = result.insertId
+        connection.execute(
+            "INSERT INTO usuario (login, senha, tipoUsuario, idInstituicaoDeEnsino) VALUES (?,?,?,?)",
+            [email, senha, 2, userId]
         )
     }
 }
