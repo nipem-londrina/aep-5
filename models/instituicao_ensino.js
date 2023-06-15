@@ -1,6 +1,6 @@
 const { connection } = require("../database/connection")
 
-class InstituicaoDeEnsino {
+class InstituicaoEnsino {
     async cadastrar(razaoSocial, cnpj, tipoDeInstituicao, nomeContato, telefone, email, endereco, senha) {
         const [result] = connection.execute(
             "INSERT INTO insituicaoDeEnsino (razaoSocial, cnpj, tipoDeInstituicao, nomeContato, telefone, endereco) VALUES (?,?,?,?,?,?)",
@@ -15,4 +15,4 @@ class InstituicaoDeEnsino {
     }
 }
 
-module.exports = { InstituicaoDeEnsino }
+module.exports = { InstituicaoEnsino }

@@ -15,8 +15,8 @@ app.use("/c", require("./routes/views-campo_estagio").router)
 app.use("/i", require("./routes/views-instituicao_ensino").router)
 app.use("/a", require("./routes/views-autarquia").router)
 
-app.use("/api/v1/campodeestagio", require("./routes/campo_estagio").router)
-app.use("/api/v1/instituicaodeensino", require("./routes/instituicaodeensino").router)
+app.use("/api/v1/campo_estagio", require("./routes/campo_estagio").router)
+app.use("/api/v1/instituicao_ensino", require("./routes/instituicao_ensino").router)
 
 
 app.listen(PORT, () => console.log(`Listening to http://localhost:${PORT}`))

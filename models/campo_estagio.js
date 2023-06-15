@@ -1,6 +1,6 @@
 const { connection } = require("../database/connection")
 
-class CampoDeEstagio {
+class CampoEstagio {
     async cadastrar(nomeCampo, endereco, email, senha) {
         const [result] = await connection.execute(
             "INSERT INTO localEstagio (nomeCampo, endereco) VALUES (?,?)",
@@ -15,4 +15,4 @@ class CampoDeEstagio {
     }
 }
 
-module.exports = { CampoDeEstagio }
+module.exports = { CampoEstagio }
