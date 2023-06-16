@@ -1,7 +1,7 @@
-const { InstituicaoDeEnsino } = require("../models/instituicaodeensino")
+const { InstituicaoEnsino } = require("../models/instituicao_ensino")
 
 function cadastrar(req, res) {
-    const model = new InstituicaoDeEnsino()
+    const model = new InstituicaoEnsino()
     model.cadastrar(
         req.body.razaoSocial,
         req.body.cnpj,
@@ -12,7 +12,7 @@ function cadastrar(req, res) {
         req.body.endereco,
         req.body.senha
     )
-    res.end("cadastrado com sucesso (eu acho (não olhei))")
+    res.end("cadastrado com sucesso (eu acho (nao olhei))")
 }
 
 module.exports = { cadastrar }
