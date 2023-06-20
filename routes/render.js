@@ -16,6 +16,12 @@ const rotas = [
     },
     // rotas de autarquia
     {
+        rota: "/a/alterar/solicitacao_estagio",
+        view: "autarquia/alterar-solicitacao.ejs",
+        metodo: "put",
+        controller: naoprecisa
+    },
+    {
         rota: "/a/cadastrar/campo_estagio",
         view: "autarquia/cadastrar-campo_estagio.ejs",
         metodo: "get",
@@ -27,10 +33,34 @@ const rotas = [
         metodo: "get",
         controller: naoprecisa
     },
+    {
+        rota: "/a/listar/ficha_estagio",
+        view: "autarquia/listar-ficha.ejs",
+        metodo: "get",
+        controller: naoprecisa
+    },
+    {
+        rota: "/a/analisar/solicitacao",
+        view: "autarquia/ver-solicitacao.ejs",
+        metodo: "get",
+        controller: naoprecisa
+    },
     // rotas de instituições
     {
         rota: "/i/solicitar",
         view: "instituicao_ensino/solicitar.ejs",
+        metodo: "get",
+        controller: naoprecisa
+    },
+    {
+        rota: "/i/listar",
+        view: "instituicao_ensino/listar-solicitacoes.ejs",
+        metodo: "get",
+        controller: naoprecisa
+    },
+    {
+        rota: "/i/analisar",
+        view: "instituicao_ensino/ver-solicitacoes.ejs",
         metodo: "get",
         controller: naoprecisa
     },
