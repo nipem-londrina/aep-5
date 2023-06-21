@@ -18,7 +18,7 @@ const rotas = [
     {
         rota: "/a/alterar/solicitacao_estagio",
         view: "autarquia/alterar-solicitacao.ejs",
-        metodo: "put",
+        method: "get",
         controller: naoprecisa
     },
     {
@@ -35,8 +35,8 @@ const rotas = [
     },
     {
         rota: "/a/listar/ficha_estagio",
-        view: "autarquia/listar-ficha.ejs",
         metodo: "get",
+        view: "autarquia/listar-fichas.ejs",
         controller: naoprecisa
     },
     {
@@ -60,8 +60,8 @@ const rotas = [
     },
     {
         rota: "/i/analisar",
-        view: "instituicao_ensino/ver-solicitacoes.ejs",
         metodo: "get",
+        view: "instituicao_ensino/ver-solicitacao.ejs",
         controller: naoprecisa
     },
     // rotas de campos
