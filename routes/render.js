@@ -5,13 +5,11 @@ const rotas = [
     {
         rota: "/login",
         view: "login/login.ejs",
-        metodo: "get",
         controller: naoprecisa
     },
     {
         rota: "/",
         view: "placeholder/hello_world.ejs",
-        metodo: "get",
         controller: require("../controllers/emoji").renderHelloWorld
     },
     // rotas de autarquia
@@ -24,43 +22,36 @@ const rotas = [
     {
         rota: "/a/cadastrar/campo_estagio",
         view: "autarquia/cadastrar-campo_estagio.ejs",
-        metodo: "get",
         controller: naoprecisa
     },
     {
         rota: "/a/cadastrar/instituicao_ensino",
         view: "autarquia/cadastrar-instituicao_ensino.ejs",
-        metodo: "get",
         controller: naoprecisa
     },
     {
         rota: "/a/listar/ficha_estagio",
-        metodo: "get",
         view: "autarquia/listar-fichas.ejs",
         controller: naoprecisa
     },
     {
         rota: "/a/analisar/solicitacao",
         view: "autarquia/ver-solicitacao.ejs",
-        metodo: "get",
         controller: naoprecisa
     },
     // rotas de instituições
     {
         rota: "/i/solicitar",
         view: "instituicao_ensino/solicitar.ejs",
-        metodo: "get",
         controller: naoprecisa
     },
     {
         rota: "/i/listar",
         view: "instituicao_ensino/listar-solicitacoes.ejs",
-        metodo: "get",
         controller: naoprecisa
     },
     {
         rota: "/i/analisar",
-        metodo: "get",
         view: "instituicao_ensino/ver-solicitacao.ejs",
         controller: naoprecisa
     },
@@ -68,7 +59,6 @@ const rotas = [
     {
         rota: "/c/atualizar",
         view: "campo_estagio/atualizar-vagas.ejs",
-        metodo: "get",
         controller: naoprecisa
     }
 ]
@@ -80,7 +70,7 @@ function naoprecisa(view) {
 
 // setar as rotas usando as infomações da lista acima
 rotas.forEach(e => {
-    router.route(e.rota)[e.metodo](e.controller(e.view))
+    router.route(e.rota).get(e.controller(e.view)) // todas as rotas são get
 })
 
 module.exports = { router }
