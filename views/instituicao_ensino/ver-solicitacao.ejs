@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <%- include(process.cwd() + '/views/_partials/head.ejs') %>
+</head>
+
+<body>
+    <header>
+        <input type="checkbox" name="mobile-nav" id="mobile-nav" class="gaadiexp-check" onchange="this.blur()">
+        <label for="mobile-nav" class="gaadiexp white" tabindex="1"><span></span></label>
+        <nav role="navigation" class="header-nav">
+            <div class="fixed-nav">
+                <div class="menu">
+                    <ul>
+                        <li class="page_item page-item-2">
+                            <a href="dashboard.html" class="list-group-item">Solicitar Estágio</a>
+                        </li>
+                        <li class="page_item page-item-2">
+                            <a href="profile.html" class="list-group-item ">Solicitações de Estágio <span
+                                    class="badge">10</span></a>
+                        </li>
+                        <li class="page_item page-item-2">
+                            <a href="wishlist.html" class="list-group-item">Sair</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <div id="div-color">
+
+            <form method="" action="">
+                <div>
+                    <h3><strong>FICHA DE SOLICITAÇÃO DE ESTÁGIO </strong></h3>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="razaoSocial">Instituição de Ensino Solicitante *</label>
+                        <input type="text" class="form-control" id="razaoSocial"
+                            placeholder="Razão Social da Instituição" name="razaoSocial"
+                            aria-label="Disabled input example" disabled readonly>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="curso">Curso</label>
+                        <input type="text" class="form-control" id="curso" name="curso" placeholder="Ex: Enfermagem" aria-label="Disabled input example" disabled readonly>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="periodoSerie">Período/Série do Curso </label>
+                        <input type="text" class="form-control" id="periodoSerie"
+                            placeholder="Período/Semestre ou 2º ano." name="periodoSerie" aria-label="Disabled input example" disabled readonly>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="especialidade">Especialidade</label>
+                        <input type="text" class="form-control" id="especialidade"
+                            placeholder="Ex: Enfermagem obstétrica" name="especialidade" aria-label="Disabled input example" disabled readonly>
+                    </div>
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="campoEstagio">Campo de Estágio</label>
+                    <input type="text" class="form-control" id="campoEstagio" placeholder=" A Definir"
+                        name="campoEstagio" aria-label="Disabled input example" disabled readonly>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="dataInicial">Inicio do Estágio</label>
+                        <input type="date" class="form-control" id="dataInicial" name="dataInicial" aria-label="Disabled input example" disabled readonly>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="dataFinal">Termino</label>
+                        <input type="date" class="form-control" id="dataFinal" name="dataFinal" aria-label="Disabled input example" disabled readonly>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="horaInicial">Horário Inicio</label>
+                        <input type="time" class="form-control" id="horaInicial" name="horaInicial" aria-label="Disabled input example" disabled readonly>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="horaFinal">Horário Termino</label>
+                        <input type="time" class="form-control" id="horaFinal" name="horaFinal" aria-label="Disabled input example" disabled readonly>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="vagasSolicitadas">Quantidade de Vagas</label>
+                        <input type="number" class="form-control" id="vagasSolicitadas" placeholder="Ex: 20"
+                            name="vagasSolicitadas" aria-label="Disabled input example" disabled readonly>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <button id="btn-form" type="submit" class="col-sm-18 w-100 btn btn btn-success">Voltar</button>
+                </div><br>
+            </form>
+        </div>
+    </section>
+
+</body>
+
+</html>

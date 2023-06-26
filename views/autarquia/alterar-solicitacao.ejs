@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <%- include(process.cwd() + '/views/_partials/head.ejs') %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="/scripts/snippet-javascript-console.min.js?v=1"></script>
+</head>
+
+<body>
+    <header>
+        <input type="checkbox" name="mobile-nav" id="mobile-nav" class="gaadiexp-check" onchange="this.blur()">
+        <label for="mobile-nav" class="gaadiexp white" tabindex="1"><span></span></label>
+        <nav role="navigation" class="header-nav">
+            <div class="fixed-nav">
+                <div class="menu">
+                    <ul>
+                        <li class="page_item page-item-2">
+                            <a href="dashboard.html" class="list-group-item">Cadastrar IES</a>
+                        </li>
+                        <li class="page_item page-item-2">
+                            <a href="profile.html" class="list-group-item ">Cadastro Local Estágio</a>
+                        </li>
+                        <li class="page_item page-item-2">
+                            <a href="profile.html" class="list-group-item ">Solicitações de Estágio <span
+                                    class="badge">10</span></a>
+                        </li>
+                        <li class="page_item page-item-2">
+                            <a href="wishlist.html" class="list-group-item">Sair</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="divsection1">
+        <div class="section1">
+            <form method="" action="">
+                <div class="form-group col-md-12" id="div-solicitante">
+                    <h4><strong>1. Solicitante: Razão Social Instituição de Ensino </strong></h4>
+                </div>
+                <hr>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="situacao">Situação</label>
+                        <select type="text" class="form-select form-control" id="situacao" name="situacao">
+                            <option selected>Selecione</option>
+                            <option value="Deferido">Deferido</option>
+                            <option value="Indeferido">Indeferido</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-8" id="inputOculto">
+                        <label for="justificativa">Justificativa</label>
+                        <input type="text" class="form-control h-75" id="justificativa"
+                            placeholder="Justificativa do Indeferimento" name="justificativa" style="height: 70px">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="vagasSolicitadas">Vagas solicitadas</label>
+                        <input type="number" class="form-control" id="vagasSolicitadas" name="vagasSolicitadas"
+                            placeholder="12" aria-label="Disabled input example" disabled readonly>
+                    </div>
+                    <div class="form-group col-md-12" style="margin-top: 7px" id="btnVisualizarFicha">
+                        <button id="btn-atualizar" type="disponibilizarVagas" class="col-sm-18 w-140 btn btn-success"
+                            style="width:140px;">Visualizar</button>
+                        <label for="" style="margin-left: 8px">Ficha de Solicitação de Estagio</label>
+                    </div>
+                </div>
+
+                <div class="form-row" id="">
+
+                    <!-- <div class="form-group col-md-6" id="">
+                        <label for="nomeCampo">Campo de Estágio 1: </label>
+                        <select type="submit" class="form-select form-control" id="nomeCampo" name="nomeCampo">
+                            <option selected>Selecione</option>
+                            <option value="1">UBS Vila Casoni</option>
+                            <option value="2">UBS Ideal</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6" id="">
+                        <label for="vagasDisponiveis">Vagas Disponiveis </label>
+                        <input type="text" class="form-control" id="vagasDisponiveis" name="vagasDisponiveis"
+                            placeholder="7" aria-label="Disabled input example" disabled readonly>
+                    </div>
+
+                    <div class="form-group col-md-6" id="#btnVisualizarFicha">
+                        <label for="preencherVagas">Preencher Vagas </label>
+                        <input type="text" class="form-control" id="preencherVagas" placeholder="Ex: 5"
+                            name="preencherVagas">
+                    </div>-->
+                    <div class="form-group col-md-12" style="margin-bottom: 7px" id="lines">
+                        <button id="btn-atualizar" type="button" class="col-sm-18 w-140 btn btn-success"
+                            style="width:140px;" onclick="addInput('lines')">+ Novo Campo </button><br><br>
+                    </div>
+                    <div class="text-center">
+                        <button id="btn-form" type="submit"
+                            class="col-sm-18 w-100 btn btn btn-success">Confirmar</button>
+                    </div><br>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+
+
+<script>
+
+
+
+    $(document).ready(function () {
+        $('#inputOculto').hide();
+        $('#situacao').change(function () {
+            if ($('#situacao').val() == 'Indeferido') {
+                $('#inputOculto').show();
+            } else {
+                $('#inputOculto').hide();
+            }
+        });
+    });
+
+
+    var formLine = 1;
+    function addInput(divName) {
+
+        var newdiv = document.createElement('div');
+        //newdiv.innerHTML  = ''+formLine+'';
+        newdiv.innerHTML += '<div class="form-row" id=""><div class="form-group col-md-12" id="lines" style="padding-top: 18px; padding-right: 0px; border-top: solid; border-width: 1px; border-color: rgb(156, 156, 156); margin-left: -15px"><label for="nomeCampo">Campo de Estágio: ' + formLine + ' </label><select type="submit" class="form-select form-control" id="nomeCampo" name="nomeCampo"><option selected>Selecione</option><option value="1">UBS Vila Casoni</option><option value="2">UBS Ideal</option></select></div><div class="form-group col-md-6" id="lines" style="padding-left: 0px"><label for="vagasDisponiveis">Vagas Disponiveis </label><input type="text" class="form-control" id="vagasDisponiveis" name="vagasDisponiveis"placeholder="7" aria-label="Disabled input example" disabled readonly></div><div class="form-group col-md-6" id="lines" style="padding-left: 0px"><label for="preencherVagas">Preencher Vagas </label><input type="text" class="form-control" id="" placeholder="Ex: 5"name="preencherVagas">  </div></div>';
+
+
+        document.getElementById(divName).appendChild(newdiv);
+        formLine++;
+    }
+
+    addInput('lines');
+
+
+</script>
+
+
+
+
+
+
+</html>

@@ -2,15 +2,7 @@
 <html lang="pt-BR">
 
 <head>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="/base.css">
-    <title>Nipem</title>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
+    <%- include(process.cwd() + '/views/_partials/head.ejs') %>
 </head>
 
 <body>
@@ -25,7 +17,7 @@
                             <a href="dashboard.html" class="list-group-item">Cadastrar IES</a>
                         </li>
                         <li class="page_item page-item-2">
-                            <a href="profile.html" class="list-group-item ">Cadastro Local Estágio</a>
+                            <a href="profile.html" class="list-group-item ">Cadastro Campo de Estágio</a>
                         </li>
                         <li class="page_item page-item-2">
                             <a href="profile.html" class="list-group-item ">Solicitações de Estágio <span
@@ -44,7 +36,7 @@
     <section>
         <div id="div-color">
 
-            <form method="" action="">
+            <form method="post" action="/api/v1/instituicao_ensino">
                 <div>
                     <h3><strong>Cadastrar IES </strong></h3>
                 </div>
@@ -71,7 +63,7 @@
                             <option value="1">Estadual</option>
                             <option value="2">Federal</option>
                             <option value="3">Privado</option>
-                            <option value="3">Tecnico</option>
+                            <option value="4">Tecnico</option>
                         </select>
                     </div>
                 </div>
